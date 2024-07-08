@@ -1,7 +1,9 @@
-package gift.member.domain;
+package gift.member.infrastructure;
 
 import gift.exception.type.DataAccessException;
 import gift.exception.type.ForbiddenException;
+import gift.member.domain.Member;
+import gift.member.domain.MemberRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;

@@ -1,6 +1,8 @@
-package gift.wishlist.domain;
+package gift.wishlist.infrastructure;
 
 import gift.exception.type.DataAccessException;
+import gift.wishlist.domain.Wishlist;
+import gift.wishlist.domain.WishlistRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;

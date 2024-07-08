@@ -1,4 +1,7 @@
-package gift.product.domain;
+package gift.product.infrastructure;
+
+import gift.product.domain.Product;
+import gift.product.domain.ProductRepository;
 
 import java.util.ArrayList;
 import java.util.List;

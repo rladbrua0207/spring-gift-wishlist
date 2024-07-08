@@ -1,6 +1,8 @@
-package gift.product.domain;
+package gift.product.infrastructure;
 
 import gift.exception.type.DataAccessException;
+import gift.product.domain.Product;
+import gift.product.domain.ProductRepository;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.simple.SimpleJdbcInsert;

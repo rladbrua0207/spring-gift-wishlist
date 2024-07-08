@@ -1,6 +1,7 @@
 package gift.member.domain;
 
 import gift.exception.type.ForbiddenException;
+import gift.member.infrastructure.MemberJDBCRepository;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
