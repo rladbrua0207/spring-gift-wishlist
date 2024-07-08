@@ -12,8 +12,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 public class AuthInterceptor implements HandlerInterceptor {
 
     private final TokenService tokenService;
-    private final String AUTHENTICATION_TYPE = "Bearer ";
+    private static final String AUTHENTICATION_TYPE = "Bearer ";
     private static final String AUTHORIZATION_HEADER = "Authorization";
+    private static final int BEARER_PREFIX_LENGTH = 7;
 
     public AuthInterceptor(TokenService tokenService) {
         this.tokenService = tokenService;
@@ -27,7 +28,7 @@ public class AuthInterceptor implements HandlerInterceptor {
             return false;
         }
 
-        String token = header.substring(7);
+        String token = header.substring(BEARER_PREFIX_LENGTH);
         try {
             String email = tokenService.extractEmail(token);
             request.setAttribute("email", email);
