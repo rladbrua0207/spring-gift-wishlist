@@ -5,14 +5,14 @@ public class Wishlist {
     private String memberEmail;
     private Long productId;
 
+    public Wishlist(String memberEmail, Long productId) {
+        this(null, memberEmail, productId);
+    }
+
     public Wishlist(Long id, String memberEmail, Long productId) {
         this.id = id;
         this.memberEmail = memberEmail;
         this.productId = productId;
-    }
-
-    public Wishlist(String memberEmail, Long productId) {
-        this(null, memberEmail, productId);
     }
 
     public Long getId() {
